@@ -1,0 +1,36 @@
+body{
+    background-color: #eee;
+    margin: 0vh;
+}
+ul.caja{
+    list-style-type: none;
+    margin: 5vh;
+    padding: 0vh;
+    border: 2px #ccc solid;
+    border-top: none;
+    background-color: #fff;
+    border-radius: 2px;
+}
+ul.caja li:not(:last-child){
+    border-bottom: 1px #ccc solid;
+}
+ul.caja li{
+    padding: 2vh;
+}
+
+button{
+    border: none;
+    padding: 1.5vh;
+    border-radius: 2px;
+}
+
+.aceptar{
+    background-color: #08f;
+    color: #fff;
+    margin-right: 2vh;
+}
+
+.cancelar{
+    background-color: #aaa;
+    color: #fff;
+}
