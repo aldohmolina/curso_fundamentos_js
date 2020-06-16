@@ -1,8 +1,10 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const plates = require('./routers/plates')
+const bodyParset = require('body-parser')
+const meals = require('./routers/meals')
 const orders = require('./routers/orders')
 const app = express()
+app.use(bodyParset.json())
 
 mongoose.connect(process.env.MONGODB_URI_SERVERLESS, {
     useNewUrlParser: true,
@@ -21,7 +23,7 @@ mongoose.connect(process.env.MONGODB_URI_SERVERLESS, {
 //     .then(x => res.send(x))
 // })
 
-app.use('/api/plates',plates)
+app.use('/api/meals',meals)
 app.use('/api/orders',orders)
 
 module.exports = app
